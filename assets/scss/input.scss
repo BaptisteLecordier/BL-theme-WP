@@ -1,0 +1,82 @@
+/*
+Theme Name: TOP_structure
+Theme URI: 
+Description: 
+Version: 1.0.0
+Author: Baptiste LECORDIER
+Author URI: 
+
+Tags: 
+Text Domain: 
+License: GNU General Public License v2 or later
+License URI: 
+*/
+
+
+@import './base/reset_css.scss';
+
+
+.bl {
+    &-nav {
+        background-color: red;
+        height: 100px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0 200px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .bl-nav-content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .bl-nav-links {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                .bl-nav-link {
+                    margin: 0 10px;
+
+                    
+                }
+
+                .bl-nav-pages {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.invisible {
+    &-in-desktop {
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+
+    &-in-mobile {
+        @media screen and (max-width: 899px) {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
