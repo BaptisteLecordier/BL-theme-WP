@@ -74,10 +74,21 @@ table {
   flex-direction: column;
   box-sizing: border-box;
   padding: 0 200px;
+  position: fixed;
+}
+.bl-nav .bl-nav-cart-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 600px;
+  width: 100%;
+  background-color: chocolate;
 }
 .bl-nav a {
   text-decoration: none;
-  color: black;
+  color: #111111;
+  cursor: pointer;
 }
 .bl-nav .bl-nav-content {
   display: flex;
@@ -107,6 +118,34 @@ table {
   .invisible-in-mobile {
     display: none;
   }
+}
+
+body {
+  height: 200vh;
+  color: #111111;
+  font-size: 0;
+}
+
+.bl-button {
+  font-size: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: solid 1px #111111;
+}
+.bl-button:hover {
+  background-color: #111111;
+  color: white;
+  opacity: 75%;
+}
+.bl-button-primary {
+  background-color: #111111;
+  color: white;
+}
+.bl-button-secondary {
+  background-color: rgb(255, 255, 255);
+  color: #111111;
 }
 
 /*# sourceMappingURL=style.css.map */

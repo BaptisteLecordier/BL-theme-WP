@@ -1,18 +1,4 @@
-/*
-Theme Name: TOP_structure
-Theme URI: 
-Description: 
-Version: 1.0.0
-Author: Baptiste LECORDIER
-Author URI: 
-
-Tags: 
-Text Domain: 
-License: GNU General Public License v2 or later
-License URI: 
-*/
-
-
+@import './wp/required.scss';
 @import './base/reset_css.scss';
 
 
@@ -27,9 +13,27 @@ License URI:
         box-sizing: border-box;
         padding: 0 200px;
 
+        position: fixed;
+
+        .bl-nav-cart-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+
+            height: 100vh;
+            max-width: 600px;
+            width: 100%;
+
+            background-color: chocolate;
+
+            
+        }
+
         a {
             text-decoration: none;
-            color: black;
+            color: #111111;
+            cursor: pointer;
         }
 
         .bl-nav-content {
@@ -44,8 +48,6 @@ License URI:
 
                 .bl-nav-link {
                     margin: 0 10px;
-
-                    
                 }
 
                 .bl-nav-pages {
@@ -79,4 +81,37 @@ License URI:
 
 
 
+body {
+    height: 200vh;
+    color: #111111;
+    font-size: 0;
+}
+
+
+.bl {
+    &-button {
+        font-size: 15px;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: solid 1px #111111;
+
+        &:hover {
+            background-color: #111111;
+            color: white;
+            opacity: 75%;
+        }
+
+        &-primary {
+            background-color: #111111;
+            color: white;
+        }
+
+        &-secondary {
+            background-color: rgb(255, 255, 255);
+            color: #111111;
+        }
+    }
+}
 
