@@ -1,33 +1,65 @@
 @import './wp/required.scss';
 @import './base/reset_css.scss';
 
-
 .bl {
     &-nav {
+        font-size: 20px;
         background-color: red;
-        height: 100px;
+        height: 90px;
         width: 100vw;
         display: flex;
         justify-content: center;
         flex-direction: column;
         box-sizing: border-box;
-        padding: 0 200px;
-
+        padding: 0 640px;
         position: fixed;
 
         .bl-nav-cart-content {
             position: absolute;
             top: 0;
             right: 0;
-
-
             height: 100vh;
-            max-width: 600px;
+            max-width: 480px;
             width: 100%;
-
             background-color: chocolate;
+            box-sizing: border-box;
+            padding: 15px;
+        }
 
-            
+        .bl-nav-cart-default-state {
+            right: -480px;
+        }
+
+        @keyframes nav-cart-open {
+            from {
+                opacity: 0;
+                right: -480px;
+            }
+            to {
+                right: 0px;
+                opacity: 100%;
+            }
+        }
+
+        @keyframes nav-cart-close {
+            from {
+                right: 0px;
+                opacity: 100%;
+            }
+            to {
+                opacity: 0;
+                right: -480px;
+            }
+        }
+
+
+
+        .bl-nav-cart-open-state {
+            animation: nav-cart-open 0.5s forwards;
+        }
+
+        .bl-nav-cart-close-state {
+            animation: nav-cart-close 0.5s forwards;
         }
 
         a {
@@ -58,11 +90,32 @@
             }
         }
     }
+
+    &-button {
+        font-size: 15px;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: solid 1px #111111;
+
+        &-primary {
+            background-color: #111111;
+            color: white;
+        }
+
+        &-secondary {
+            background-color: rgb(255, 255, 255);
+            color: #111111;
+        }
+
+        &:hover {
+            background-color: #111111;
+            color: white;
+            opacity: 75%;
+        }
+    }
 }
-
-
-
-
 
 .invisible {
     &-in-desktop {
@@ -78,9 +131,6 @@
     }
 }
 
-
-
-
 body {
     height: 200vh;
     color: #111111;
@@ -88,30 +138,4 @@ body {
 }
 
 
-.bl {
-    &-button {
-        font-size: 15px;
-        cursor: pointer;
-        font-size: 15px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: solid 1px #111111;
-
-        &:hover {
-            background-color: #111111;
-            color: white;
-            opacity: 75%;
-        }
-
-        &-primary {
-            background-color: #111111;
-            color: white;
-        }
-
-        &-secondary {
-            background-color: rgb(255, 255, 255);
-            color: #111111;
-        }
-    }
-}
 
