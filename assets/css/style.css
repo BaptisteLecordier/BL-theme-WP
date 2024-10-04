@@ -65,17 +65,41 @@ table {
   border-spacing: 0;
 }
 
+.bl-body {
+  height: 200vh;
+  color: #111111;
+  font-size: 0;
+}
+
+.obscured-while-cart-is-open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
 .bl-nav {
   font-size: 20px;
-  background-color: red;
+  background-color: rgb(230, 230, 230);
   height: 90px;
   width: 100vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 0 640px;
+  padding: 0 20px;
   position: fixed;
+  z-index: 10;
+  align-items: center;
+}
+.bl-nav .bl-nav-content {
+  background-color: aqua;
+  max-width: 1280px;
+  width: 100%;
 }
 .bl-nav .bl-nav-cart-content {
   position: absolute;
@@ -84,9 +108,15 @@ table {
   height: 100vh;
   max-width: 480px;
   width: 100%;
-  background-color: chocolate;
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
   padding: 15px;
+  z-index: 30;
+}
+.bl-nav .bl-nav-cart-content-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .bl-nav .bl-nav-cart-default-state {
   right: -480px;
@@ -171,12 +201,6 @@ table {
   .invisible-in-mobile {
     display: none;
   }
-}
-
-body {
-  height: 200vh;
-  color: #111111;
-  font-size: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
